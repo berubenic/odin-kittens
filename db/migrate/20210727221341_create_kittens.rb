@@ -4,7 +4,7 @@ class CreateKittens < ActiveRecord::Migration[6.1]
       t.string :name
       t.integer :age
       t.integer :cuteness
-      t.integer :softeness
+      t.integer :softness
 
       t.timestamps
     end
