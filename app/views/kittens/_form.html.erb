@@ -2,6 +2,9 @@
     <div>
         <%= form.label :name %><br>
         <%= form.text_field :name %>
+        <% @kitten.errors.messages.each do |message| %>
+      <div><%= message[1][0] %></div>
+    <% end %>
     </div>
     <div>
         <%= form.label :age %><br>
