@@ -17,6 +17,7 @@ class KittensController < ApplicationController
         if @kitten.save
             redirect_to @kitten
         else
+            flash.now[:error] = "Could not create kitten"
             render :new
         end
     end
@@ -31,6 +32,7 @@ class KittensController < ApplicationController
         if @kitten.update(kitten_params)
             redirect_to @kitten
         else
+            flash.now[:error] = "Could not update kitten"
             render :edit
         end
     end
